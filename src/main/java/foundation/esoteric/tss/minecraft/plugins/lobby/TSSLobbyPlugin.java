@@ -1,8 +1,8 @@
 package foundation.esoteric.tss.minecraft.plugins.lobby;
 
-import org.esoteric.tss.minecraft.plugins.core.TSSCorePlugin;
-import org.esoteric.tss.minecraft.plugins.core.data.SimpleLocation;
-import org.esoteric.tss.minecraft.plugins.core.managers.FileManager;
+import foundation.esoteric.tss.minecraft.plugins.core.TSSCorePlugin;
+import foundation.esoteric.tss.minecraft.plugins.core.data.SimpleLocation;
+import foundation.esoteric.tss.minecraft.plugins.core.managers.FileManager;
 import foundation.esoteric.tss.minecraft.plugins.lobby.cosmetics.CosmeticsManager;
 import foundation.esoteric.tss.minecraft.plugins.lobby.event.listeners.JoinListener;
 import foundation.esoteric.tss.minecraft.plugins.lobby.event.listeners.LobbyListener;
@@ -11,7 +11,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.esoteric.tss.minecraft.plugins.ranks.TSSRanksPlugin;
+import foundation.esoteric.tss.minecraft.plugins.ranks.TSSRanksPlugin;
 
 public final class TSSLobbyPlugin extends JavaPlugin {
 

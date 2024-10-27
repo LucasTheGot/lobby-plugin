@@ -1,7 +1,7 @@
 package foundation.esoteric.tss.minecraft.plugins.lobby.cosmetics.hat;
 
-import org.esoteric.tss.minecraft.plugins.core.data.player.Message;
-import org.esoteric.tss.minecraft.plugins.core.data.player.TranslatableItemStack;
+import foundation.esoteric.tss.minecraft.plugins.core.data.player.Message;
+import foundation.esoteric.tss.minecraft.plugins.core.data.player.TranslatableItemStack;
 import foundation.esoteric.tss.minecraft.plugins.lobby.TSSLobbyPlugin;
 import foundation.esoteric.tss.minecraft.plugins.lobby.cosmetics.Cosmetic;
 import org.bukkit.Material;

@@ -1,6 +1,6 @@
 package foundation.esoteric.tss.minecraft.plugins.lobby.cosmetics;
 
-import org.esoteric.tss.minecraft.plugins.core.data.player.Message;
+import foundation.esoteric.tss.minecraft.plugins.core.data.player.Message;
 import foundation.esoteric.tss.minecraft.plugins.lobby.TSSLobbyPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;

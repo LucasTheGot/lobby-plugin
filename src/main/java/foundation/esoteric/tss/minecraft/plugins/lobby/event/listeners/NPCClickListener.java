@@ -1,7 +1,7 @@
 package foundation.esoteric.tss.minecraft.plugins.lobby.event.listeners;
 
-import org.esoteric.tss.minecraft.plugins.core.data.npc.NPC;
-import org.esoteric.tss.minecraft.plugins.core.events.custom.NPCClickEvent;
+import foundation.esoteric.tss.minecraft.plugins.core.data.npc.NPC;
+import foundation.esoteric.tss.minecraft.plugins.core.events.custom.NPCClickEvent;
 import foundation.esoteric.tss.minecraft.plugins.lobby.TSSLobbyPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.World;

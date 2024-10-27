@@ -1,6 +1,6 @@
 package foundation.esoteric.tss.minecraft.plugins.lobby.event.listeners;
 
-import org.esoteric.tss.minecraft.plugins.core.util.DebugUtil;
+import foundation.esoteric.tss.minecraft.plugins.core.util.DebugUtil;
 import foundation.esoteric.tss.minecraft.plugins.lobby.TSSLobbyPlugin;
 import foundation.esoteric.tss.minecraft.plugins.lobby.cosmetics.AbstractCosmetic;
 import foundation.esoteric.tss.minecraft.plugins.lobby.cosmetics.CosmeticType;
