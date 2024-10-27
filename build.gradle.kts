@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "foundation.esoteric"
-version = "0.1.0"
+version = "0.1.1"
 description = "The Minecraft plugin that manages The Slimy Swamp's lobby world!"
 
 java {
