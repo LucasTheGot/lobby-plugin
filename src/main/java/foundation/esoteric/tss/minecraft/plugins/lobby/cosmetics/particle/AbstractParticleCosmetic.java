@@ -1,7 +1,7 @@
-package org.esoteric.tss.minecraft.plugins.lobby.cosmetics.particle;
+package foundation.esoteric.tss.minecraft.plugins.lobby.cosmetics.particle;
 
-import org.esoteric.tss.minecraft.plugins.lobby.TSSLobbyPlugin;
-import org.esoteric.tss.minecraft.plugins.lobby.cosmetics.AbstractCosmetic;
+import foundation.esoteric.tss.minecraft.plugins.lobby.TSSLobbyPlugin;
+import foundation.esoteric.tss.minecraft.plugins.lobby.cosmetics.AbstractCosmetic;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitTask;

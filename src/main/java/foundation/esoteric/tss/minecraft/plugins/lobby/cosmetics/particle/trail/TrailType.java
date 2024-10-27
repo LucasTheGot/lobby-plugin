@@ -1,9 +1,9 @@
-package org.esoteric.tss.minecraft.plugins.lobby.cosmetics.particle.trail;
+package foundation.esoteric.tss.minecraft.plugins.lobby.cosmetics.particle.trail;
 
 import org.esoteric.tss.minecraft.plugins.core.data.player.Message;
 import org.esoteric.tss.minecraft.plugins.core.data.player.TranslatableItemStack;
-import org.esoteric.tss.minecraft.plugins.lobby.TSSLobbyPlugin;
-import org.esoteric.tss.minecraft.plugins.lobby.cosmetics.particle.ParticleCosmetic;
+import foundation.esoteric.tss.minecraft.plugins.lobby.TSSLobbyPlugin;
+import foundation.esoteric.tss.minecraft.plugins.lobby.cosmetics.particle.ParticleCosmetic;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.entity.Player;

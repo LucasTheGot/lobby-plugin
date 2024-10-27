@@ -1,6 +1,6 @@
-package org.esoteric.tss.minecraft.plugins.lobby.cosmetics;
+package foundation.esoteric.tss.minecraft.plugins.lobby.cosmetics;
 
-import org.esoteric.tss.minecraft.plugins.lobby.TSSLobbyPlugin;
+import foundation.esoteric.tss.minecraft.plugins.lobby.TSSLobbyPlugin;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 

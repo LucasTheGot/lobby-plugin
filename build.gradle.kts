@@ -8,7 +8,7 @@ plugins {
     id("xyz.jpenilla.resource-factory-bukkit-convention") version "1.1.1"
 }
 
-group = "org.esoteric"
+group = "foundation.esoteric"
 version = "0.1.0"
 description = "The Minecraft plugin that manages The Slimy Swamp's lobby world!"
 
@@ -42,11 +42,11 @@ tasks {
 bukkitPluginYaml {
     name = "TSSLobby"
     description = project.description
-    authors.addAll("Esoteric Organisation", "Esoteric Enderman")
+    authors.addAll("Esoteric Foundation", "Esoteric Enderman")
 
     version = project.version.toString()
     apiVersion = "1.21"
-    main = "org.esoteric.tss.minecraft.plugins.lobby.TSSLobbyPlugin"
+    main = "foundation.esoteric.tss.minecraft.plugins.lobby.TSSLobbyPlugin"
     load = BukkitPluginYaml.PluginLoadOrder.STARTUP
     depend.addAll("TSSCore", "TSSRanks")
 }

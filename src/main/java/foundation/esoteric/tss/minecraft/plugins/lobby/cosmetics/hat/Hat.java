@@ -1,7 +1,7 @@
-package org.esoteric.tss.minecraft.plugins.lobby.cosmetics.hat;
+package foundation.esoteric.tss.minecraft.plugins.lobby.cosmetics.hat;
 
-import org.esoteric.tss.minecraft.plugins.lobby.TSSLobbyPlugin;
-import org.esoteric.tss.minecraft.plugins.lobby.cosmetics.AbstractCosmetic;
+import foundation.esoteric.tss.minecraft.plugins.lobby.TSSLobbyPlugin;
+import foundation.esoteric.tss.minecraft.plugins.lobby.cosmetics.AbstractCosmetic;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
