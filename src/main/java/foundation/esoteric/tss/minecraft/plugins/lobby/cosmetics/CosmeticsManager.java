@@ -15,7 +15,7 @@ public class CosmeticsManager {
 	ArrayList<T> equippedTargetCosmetics = new ArrayList<>();
 	ArrayList<AbstractCosmetic> equippedCosmetics = activeCosmetics.computeIfAbsent(player.getUniqueId(), key -> new ArrayList<>());
 	for (AbstractCosmetic equippedCosmetic : equippedCosmetics) {
-	  Cosmetic cosmetic = equippedCosmetic.getCosmetic();
+	  final Cosmetic cosmetic = equippedCosmetic.getCosmetic();
 
 	  if (targetCosmeticClass.isInstance(equippedCosmetic)) {
 		equippedTargetCosmetics.add((T) equippedCosmetic);

@@ -22,6 +22,7 @@ import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.FireworkMeta;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.jetbrains.annotations.NotNull;
+import org.spigotmc.event.player.PlayerSpawnLocationEvent;
 
 public class JoinListener implements Listener {
 
@@ -31,15 +32,16 @@ public class JoinListener implements Listener {
 	this.plugin = plugin;
   }
 
+  @EventHandler
+  public void onPlayerSpawn(@NotNull PlayerSpawnLocationEvent playerSpawnLocationEvent) {
+	playerSpawnLocationEvent.setSpawnLocation(plugin.getLobbyLocation());
+  }
+
   @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
   public void onJoin(@NotNull PlayerJoinEvent event) {
-	Player player = event.getPlayer();
-	boolean success = player.teleport(plugin.getLobbyLocation());
-	if (!success) {
-	  return;
-	}
+	final Player player = event.getPlayer();
 
-	PlayerInventory playerInventory = player.getInventory();
+	final PlayerInventory playerInventory = player.getInventory();
 	playerInventory.clear();
 	playerInventory.setItem(4, new TranslatableItemStack(Material.CHEST, Message.COSMETICS_ITEM_DISPLAY_NAME, Message.COSMETICS_ITEM_DESCRIPTION).asBukkitItemStack(player, plugin.getCore()));
 
@@ -61,7 +63,7 @@ public class JoinListener implements Listener {
 	  return;
 	}
 
-	World playerWorld = player.getWorld();
+	final World playerWorld = player.getWorld();
 
 	Firework firework = playerWorld.spawn(
 			player.getLocation().clone().add(
@@ -72,8 +74,8 @@ public class JoinListener implements Listener {
 			Firework.class
 	);
 
-	FireworkMeta fireworkMeta = firework.getFireworkMeta();
-	FireworkType fireworkType = rank.getFireworkType();
+	final FireworkMeta fireworkMeta = firework.getFireworkMeta();
+	final FireworkType fireworkType = rank.getFireworkType();
 
 	for (FireworkEffect effect : fireworkType.getEffects()) {
 	  fireworkMeta.addEffects(effect);
@@ -82,7 +84,7 @@ public class JoinListener implements Listener {
 	fireworkMeta.setPower(fireworkType.getPower());
 	firework.setFireworkMeta(fireworkMeta);
 
-	Particle spiralParticle = fireworkType.getSpiralParticle();
+	final Particle spiralParticle = fireworkType.getSpiralParticle();
 
 	if (spiralParticle == null) {
 	  return;

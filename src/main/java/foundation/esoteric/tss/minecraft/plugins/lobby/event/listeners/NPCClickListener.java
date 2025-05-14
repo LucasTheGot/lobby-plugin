@@ -20,12 +20,11 @@ public class NPCClickListener implements Listener {
 
   @EventHandler
   public void onNPCClick(@NotNull NPCClickEvent event) {
-	Player player = event.getPlayer();
-	NPC npc = event.getNpc();
-
-	String worldName = npc.getDestinationWorldName();
-
-	World world = Bukkit.getWorld(worldName);
+	final Player player = event.getPlayer();
+	final NPC npc = event.getNpc();
+	
+	final String worldName = npc.getDestinationWorldName();
+	final World world = Bukkit.getWorld(worldName);
 
 	if (world != null) {
 	  Bukkit.getScheduler().runTask(plugin, () ->

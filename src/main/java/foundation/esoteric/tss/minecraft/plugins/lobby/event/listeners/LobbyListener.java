@@ -65,14 +65,14 @@ public class LobbyListener implements Listener {
 
   @EventHandler
   public void onCosmeticMenuNavigate(@NotNull InventoryClickEvent event) {
-	ItemStack clickedItem = event.getCurrentItem();
+	final ItemStack clickedItem = event.getCurrentItem();
 	if (clickedItem == null) {
 	  return;
 	}
 
-	ItemMeta itemInfo = clickedItem.getItemMeta();
+	final ItemMeta itemInfo = clickedItem.getItemMeta();
 
-	CosmeticType cosmeticType;
+	final CosmeticType cosmeticType;
 	try {
 	  cosmeticType = CosmeticType.valueOf(itemInfo.getPersistentDataContainer().get(new NamespacedKey(plugin, "cosmetic_type"), PersistentDataType.STRING));
 	} catch (NullPointerException | IllegalArgumentException exception) {
@@ -84,27 +84,27 @@ public class LobbyListener implements Listener {
 
   @EventHandler
   public void onCosmeticMenuSelect(@NotNull InventoryClickEvent event) {
-	ItemStack clickedItem = event.getCurrentItem();
+	final ItemStack clickedItem = event.getCurrentItem();
 	if (clickedItem == null) {
 	  return;
 	}
 
-	ItemMeta itemInfo = clickedItem.getItemMeta();
+	final ItemMeta itemInfo = clickedItem.getItemMeta();
 
 	if (itemInfo == null) {
 	  return;
 	}
 
-	PersistentDataContainer container = itemInfo.getPersistentDataContainer();
-	String cosmetic = container.get(new NamespacedKey(plugin, "cosmetic"), PersistentDataType.STRING);
+	final PersistentDataContainer container = itemInfo.getPersistentDataContainer();
+	final String cosmetic = container.get(new NamespacedKey(plugin, "cosmetic"), PersistentDataType.STRING);
 
 	if (cosmetic == null) {
 	  return;
 	}
 
-	Player player = (Player) event.getWhoClicked();
-	CosmeticsManager cosmeticsManager = plugin.getCosmeticsManager();
-	ArrayList<AbstractCosmetic> activePlayerCosmetics = cosmeticsManager.getActiveCosmetics().get(player.getUniqueId());
+	final Player player = (Player) event.getWhoClicked();
+	final CosmeticsManager cosmeticsManager = plugin.getCosmeticsManager();
+	final ArrayList<AbstractCosmetic> activePlayerCosmetics = cosmeticsManager.getActiveCosmetics().get(player.getUniqueId());
 
 	switch (cosmetic) {
 	  case "hat" -> {

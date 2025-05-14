@@ -22,7 +22,10 @@ public class TrailMenu {
 	Inventory inventory = Bukkit.createInventory(null, 27, messageManager.getPlayerMessage(Message.TRAILS, player));
 
 	ArrayList<TrailType> activeTrails = plugin.getCosmeticsManager().getPlayerCosmetics(player, TrailType.class);
-	Rank rank = plugin.getRanksPlugin().getRankManager().getPlayerRank(player);
+	final Rank rank = plugin.getRanksPlugin().getRankManager().getPlayerRank(player);
+
+	if (rank == null)
+		return;
 
 	TrailType[] trailTypes = TrailType.values();
 	for (int i = 0; i < trailTypes.length; i++) {
@@ -42,7 +45,7 @@ public class TrailMenu {
 			  )
 	  );
 
-	  PersistentDataContainer container = displayItemMeta.getPersistentDataContainer();
+	  final PersistentDataContainer container = displayItemMeta.getPersistentDataContainer();
 	  container.set(new NamespacedKey(plugin, "trail_type"), PersistentDataType.STRING, trailType.name());
 	  container.set(new NamespacedKey(plugin, "cosmetic"), PersistentDataType.STRING, "trail");
 	  displayItem.setItemMeta(displayItemMeta);

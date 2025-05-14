@@ -18,7 +18,7 @@ public abstract class AbstractCosmetic {
   protected Cosmetic cosmetic;
   protected Player player;
 
-  protected AbstractCosmetic(Cosmetic cosmetic, @NotNull Player player, @NotNull TSSLobbyPlugin plugin) {
+  protected AbstractCosmetic(final Cosmetic cosmetic, @NotNull final Player player, @NotNull final TSSLobbyPlugin plugin) {
 	this.plugin = plugin;
 
 	this.cosmetic = cosmetic;
@@ -27,11 +27,10 @@ public abstract class AbstractCosmetic {
   }
 
   public void equip() {
-	UUID playerUuid = player.getUniqueId();
-	Map<UUID, ArrayList<AbstractCosmetic>> playerCosmetics = plugin.getCosmeticsManager().getActiveCosmetics();
-	ArrayList<AbstractCosmetic> equippedCosmetics = playerCosmetics.computeIfAbsent(playerUuid, key -> new ArrayList<>());
+	final Map<UUID, ArrayList<AbstractCosmetic>> playerCosmetics = plugin.getCosmeticsManager().getActiveCosmetics();
+	ArrayList<AbstractCosmetic> equippedCosmetics = playerCosmetics.computeIfAbsent(player.getUniqueId(), key -> new ArrayList<>());
 
-	Rank playerRank = plugin.getRanksPlugin().getRankManager().getPlayerRank(player);
+	final Rank playerRank = plugin.getRanksPlugin().getRankManager().getPlayerRank(player);
 
 	MessageManager messageManager = plugin.getCore().getMessageManager();
 	if (cosmetic.getRequiredRankWeight() > playerRank.getWeight()) {

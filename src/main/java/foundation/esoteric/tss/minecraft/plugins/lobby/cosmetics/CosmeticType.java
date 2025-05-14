@@ -20,15 +20,15 @@ public enum CosmeticType {
   private final BiConsumer<Player, TSSLobbyPlugin> menuConstructor;
 
   CosmeticType(TranslatableItemStack displayItem, BiConsumer<Player, TSSLobbyPlugin> menuConstructor) {
-	this.menuConstructor = menuConstructor;
-	this.displayItem = displayItem;
+	  this.menuConstructor = menuConstructor;
+	  this.displayItem = displayItem;
   }
 
   public ItemStack getDisplayItem(Player player, @NotNull TSSLobbyPlugin plugin) {
-	return displayItem.asBukkitItemStack(player, plugin.getCore());
+	  return displayItem.asBukkitItemStack(player, plugin.getCore());
   }
 
   public BiConsumer<Player, TSSLobbyPlugin> getMenuConstructor() {
-	return menuConstructor;
+	  return menuConstructor;
   }
 }

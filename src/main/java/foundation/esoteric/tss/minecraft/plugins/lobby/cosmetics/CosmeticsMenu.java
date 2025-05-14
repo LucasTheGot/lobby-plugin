@@ -14,11 +14,11 @@ import org.jetbrains.annotations.NotNull;
 public class CosmeticsMenu {
 
   public CosmeticsMenu(Player player, @NotNull TSSLobbyPlugin plugin) {
-	Inventory inventory = Bukkit.createInventory(null, 27, plugin.getCore().getMessageManager().getPlayerMessage(Message.COSMETICS, player));
+	final Inventory inventory = Bukkit.createInventory(null, 27, plugin.getCore().getMessageManager().getPlayerMessage(Message.COSMETICS, player));
 
-	CosmeticType[] cosmeticTypes = CosmeticType.values();
+	final CosmeticType[] cosmeticTypes = CosmeticType.values();
 	for (int i = 0; i < cosmeticTypes.length; i++) {
-	  CosmeticType cosmeticType = cosmeticTypes[i];
+	  final CosmeticType cosmeticType = cosmeticTypes[i];
 
 	  ItemStack displayItem = cosmeticType.getDisplayItem(player, plugin);
 	  ItemMeta displayItemMeta = displayItem.getItemMeta();
